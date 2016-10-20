@@ -5,9 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.neylorsousa.treinamento</groupId>
     <artifactId>teste</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
         <module>laboratorio-1</module>
+        <module>laboratorio-2</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.neylorsousa.treinamento</groupId>
+                <artifactId>laboratorio-1</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
