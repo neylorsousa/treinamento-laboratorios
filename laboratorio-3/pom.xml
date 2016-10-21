@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>laboratorio-3</artifactId>
+    <packaging>war</packaging>
 
     <dependencyManagement>
         <dependencies>
