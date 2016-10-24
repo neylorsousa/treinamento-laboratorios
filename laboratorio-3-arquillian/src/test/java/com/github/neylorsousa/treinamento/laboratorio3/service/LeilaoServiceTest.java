@@ -1,7 +1,10 @@
 package com.github.neylorsousa.treinamento.laboratorio3.service;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 
+import com.github.neylorsousa.treinamento.laboratorio3.entity.Lance;
+import com.github.neylorsousa.treinamento.laboratorio3.entity.Leilao;
 import com.github.neylorsousa.treinamento.laboratorio3.faker.LeilaoFaker;
 import com.github.neylorsousa.treinamento.laboratorio3.producers.EntityManagerProducerTest;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -17,11 +20,14 @@ public class LeilaoServiceTest {
 
 	@Deployment
 	public static JavaArchive createDeployment() {
-		return ShrinkWrap.create(JavaArchive.class)
+		JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class)
 			.addClass(EntityManagerProducerTest.class)
+			.addClass(Lance.class)
+			.addClass(Leilao.class)
 			.addClass(LeilaoService.class)
-			.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
-			.addAsManifestResource("test-persistence.xml", "persistence.xml");
+			.addAsManifestResource("test-persistence.xml", "persistence.xml")
+			.addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+		return javaArchive;
 	}
 
 	@Inject
@@ -38,6 +44,7 @@ public class LeilaoServiceTest {
 	}
 
 	@Test
+	@Transactional(Transactional.TxType.REQUIRED)
 	public void cadastrarLeilaoSemLances() {
 		LeilaoFaker leilaoFaker = new LeilaoFaker();
 		leilaoService.cadastrarLeilao(leilaoFaker.novoSemIdSemLances());

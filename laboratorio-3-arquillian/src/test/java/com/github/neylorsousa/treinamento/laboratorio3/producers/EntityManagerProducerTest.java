@@ -7,11 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-/**
- * Created by 02109880104 on 21/10/2016.
- */
 public class EntityManagerProducerTest {
-	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("laboratorio3PUTest");
+	private static EntityManagerFactory factory  = Persistence.createEntityManagerFactory("laboratorio3PUTest");
 
 	@Produces
 	@RequestScoped

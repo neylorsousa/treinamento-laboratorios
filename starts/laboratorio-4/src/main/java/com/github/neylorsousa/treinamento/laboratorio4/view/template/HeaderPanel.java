@@ -1,6 +1,5 @@
 package com.github.neylorsousa.treinamento.laboratorio4.view.template;
 
-import com.github.neylorsousa.treinamento.laboratorio4.view.LeilaoPage;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 

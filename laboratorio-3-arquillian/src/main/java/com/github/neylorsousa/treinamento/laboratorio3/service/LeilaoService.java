@@ -26,7 +26,6 @@ public class LeilaoService {
 		entityManager.remove(lance);
 	}
 
-	@Transactional
 	public void cadastrarLeilao(Leilao leilao) {
 		entityManager.persist(leilao);
 	}
