@@ -11,7 +11,7 @@ public class HeaderPanel extends Panel {
 		add(new Link("leilaoMenu"){
 			@Override
 			public void onClick() {
-				setResponsePage(new LeilaoPage());
+
 			}
 		});
 	}

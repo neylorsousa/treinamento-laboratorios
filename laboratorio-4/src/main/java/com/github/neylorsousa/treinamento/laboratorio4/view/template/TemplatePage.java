@@ -5,7 +5,6 @@ import org.apache.wicket.markup.html.WebPage;
 
 public class TemplatePage extends WebPage{
 	private Component headerPanel;
-	private Component menuPanel;
 	private Component footerPanel;
 
 	public TemplatePage(){
