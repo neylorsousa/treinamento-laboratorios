@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+    <wicket:extend>
+        <h1>Cadastro de Leilão</h1>
+        <p class="message" wicket:id="message">Mensage de sucesso ou erro</p>
+        <form wicket:id="form" >
+            <label>Nome:</label>
+            <input type="text" wicket:id="nome" />
+
+            <input type="submit" value="Salvar"/>
+        </form>
+        <hr />
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th width="80%">Leilão</th>
+                    <th width="20%">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr wicket:id="leiloes">
+                    <td wicket:id="nome"></td>
+                    <td><a wicket:id="editar">Editar</a> | <a wicket:id="excluir" >Excluir</a> | <a wicket:id="lances" >Lances</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </wicket:extend>
+</body>
+</html>

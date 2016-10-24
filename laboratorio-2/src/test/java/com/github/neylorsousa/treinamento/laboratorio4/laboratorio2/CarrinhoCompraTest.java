@@ -1,7 +1,7 @@
-package com.github.neylorsousa.treinamento.laboratorio2;
+package com.github.neylorsousa.treinamento.laboratorio4.laboratorio2;
 
-import com.github.neylorsousa.treinamento.teste.laboratorio1.CarrinhoCompra;
-import com.github.neylorsousa.treinamento.teste.laboratorio1.Item;
+import com.github.neylorsousa.treinamento.laboratorio4.teste.laboratorio1.CarrinhoCompra;
+import com.github.neylorsousa.treinamento.laboratorio4.teste.laboratorio1.Item;
 import org.junit.*;
 
 import static org.hamcrest.CoreMatchers.equalTo;

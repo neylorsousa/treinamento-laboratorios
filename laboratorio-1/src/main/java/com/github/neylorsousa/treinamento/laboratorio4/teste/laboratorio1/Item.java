@@ -1,4 +1,4 @@
-package com.github.neylorsousa.treinamento.teste.laboratorio1;
+package com.github.neylorsousa.treinamento.laboratorio4.teste.laboratorio1;
 
 public class Item {
 	private String produto;
