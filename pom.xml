@@ -11,7 +11,8 @@
     <modules>
         <module>laboratorio-1</module>
         <module>laboratorio-2</module>
-        <module>laboratorio-3</module>
+        <module>laboratorio-3-arquillian</module>
+        <module>laboratorio-4</module>
     </modules>
 
     <dependencyManagement>

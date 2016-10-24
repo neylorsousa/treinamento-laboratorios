@@ -1,0 +1,16 @@
+package com.github.neylorsousa.treinamento.laboratorio4.teste.laboratorio1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CarrinhoCompra {
+	private List<Item> itens = new ArrayList<Item>();
+
+	public void addItem(Item item) {
+		itens.add(item);
+	}
+
+	public List<Item> getItens() {
+		return itens;
+	}
+}
