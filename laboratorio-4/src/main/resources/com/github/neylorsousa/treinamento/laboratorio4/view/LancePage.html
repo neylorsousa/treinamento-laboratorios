@@ -11,36 +11,6 @@
         </fieldset>
         <br />
         <div wicket:id="message"></div>
-        <form wicket:id="form" >
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Nome Pessoa:</td>
-                        <td><input type="text" wicket:id="nomePessoa" /></td>
-                        <td>Valor Lance:</td>
-                        <td><input type="text" wicket:id="valor" /></td>
-                        <td><input type="submit" value="Salvar"/></td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-        <br />
-        <table width="100%">
-            <thead>
-            <tr>
-                <th width="60%">Nome Pessoa</th>
-                <th width="20%">Valor Lance</th>
-                <th width="20%">Ações</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr wicket:id="lances">
-                <td wicket:id="nome"></td>
-                <td wicket:id="valor"></td>
-                <td><a wicket:id="excluir" >Excluir</a></td>
-            </tr>
-            </tbody>
-        </table>
     </wicket:extend>
 </body>
 </html>
