@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>laboratorio-3</artifactId>
+    <artifactId>laboratorio-3-arquillian</artifactId>
     <packaging>war</packaging>
 
     <dependencyManagement>
