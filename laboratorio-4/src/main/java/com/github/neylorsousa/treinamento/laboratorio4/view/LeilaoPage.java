@@ -11,9 +11,7 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
-
 import java.util.ArrayList;
-
 import static java.util.stream.Collectors.toList;
 
 public class LeilaoPage extends TemplatePage {
