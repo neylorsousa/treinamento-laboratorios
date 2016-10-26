@@ -25,7 +25,6 @@ public class LeilaoServiceTest {
 		assertThat("Persistencia de leilao sem ID", leilao.getId(), notNullValue());
 	}
 
-	// Fazer com que o método persistir do serviço permita atualizar o a entidade
 	@Test
 	public void persistirLeilaoComId() {
 		Leilao leilao = LeilaoFaker.existenteNoBanco(leilaoService);

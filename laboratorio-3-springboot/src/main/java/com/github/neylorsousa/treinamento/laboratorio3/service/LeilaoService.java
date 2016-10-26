@@ -24,7 +24,6 @@ public class LeilaoService {
 
 	@Transactional
 	public void deletar(Integer idLeilao) {
-		//TODO desafio não permitir deletar leilões com lances vinculados, lançar error e fazer com que o teste entenda isso
 		entityManager.remove(entityManager.getReference(Leilao.class, idLeilao));
 	}
 
