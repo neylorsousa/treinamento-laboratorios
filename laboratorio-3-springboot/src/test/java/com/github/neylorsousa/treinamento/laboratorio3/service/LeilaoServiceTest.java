@@ -19,14 +19,14 @@ public class LeilaoServiceTest {
 	private LeilaoService leilaoService;
 
 	@Test
-	public void persistirLeilaoSemId() {
+	public void persistirNovoLeilao() {
 		Leilao leilao = LeilaoFaker.novo();
 		leilaoService.persistir(leilao);
 		assertThat("Persistencia de leilao sem ID", leilao.getId(), notNullValue());
 	}
 
 	@Test
-	public void persistirLeilaoComId() {
+	public void atualizarLeilao() {
 		Leilao leilao = LeilaoFaker.existenteNoBanco(leilaoService);
 		leilao.setNome("Mudando o nome");
 		leilaoService.persistir(leilao);

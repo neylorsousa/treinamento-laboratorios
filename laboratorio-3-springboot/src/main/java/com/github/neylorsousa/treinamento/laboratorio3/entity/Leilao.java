@@ -1,11 +1,8 @@
 package com.github.neylorsousa.treinamento.laboratorio3.entity;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -15,8 +12,6 @@ public class Leilao {
 	@GeneratedValue
 	private Integer id;
 
-	@Size(max = 255)
-	@NotEmpty
 	private String nome;
 
 	public Integer getId() {
