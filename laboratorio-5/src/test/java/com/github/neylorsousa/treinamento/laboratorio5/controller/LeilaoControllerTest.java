@@ -7,15 +7,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -56,8 +56,20 @@ public class LeilaoControllerTest {
 	@Test
 	public void removerLeilaoPorId() {
 		Leilao leilao = LeilaoFaker.existenteNoBanco(leilaoService);
-		ResponseEntity<Void> deleteResponse = restTemplate.exchange("/leiloes/{id}", HttpMethod.DELETE, HttpEntity.EMPTY, Void.class, leilao.getId());
+		ResponseEntity<Void> deleteResponse = restTemplate.exchange("/leiloes/{id}", HttpMethod.DELETE,
+																	HttpEntity.EMPTY,
+																	Void.class, leilao.getId());
 		assertThat("Remoção do leilão", deleteResponse.getStatusCode(), equalTo(HttpStatus.OK));
 	}
 
+	@TestConfiguration
+	static class Config {
+
+		@Bean
+		public RestTemplateBuilder restTemplateBuilder() {
+			return new RestTemplateBuilder()
+				.basicAuthorization("teste","teste");
+		}
+
+	}
 }

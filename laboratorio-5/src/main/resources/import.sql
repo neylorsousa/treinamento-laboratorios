@@ -1,0 +1,1 @@
+insert into usuario(username,password) values ('teste','teste');
