@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import com.github.neylorsousa.treinamento.laboratorio5.annotation.Show;
+
 @Entity
 public class Usuario {
 
@@ -11,6 +13,7 @@ public class Usuario {
 	@GeneratedValue
 	private Integer id;
 
+	@Show
 	private String username;
 
 	private String password;
